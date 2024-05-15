@@ -1,5 +1,6 @@
 package com.sanele.API;
 
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -8,23 +9,35 @@ public class XrayJiraPage {
 
 
 
+
     @Autowired
-    Auth auth;
-
-
+    APIUtils apiUtils;
 
 
     public boolean authenticateClient(){
 
 
-// auth.s();
+       return true;
+    }
 
-return true;
+    public void  authenticateClientBasic(){
+
+
+    }
+
+    public void authenticateClientDigest(){
+
+
     }
 
 
-    public void sendCucumberResult(){
+    public void sendXrayCucumberResult(){
 
+    }
+
+    public JSONObject getJiraIssueResult(){
+
+      return  null;
 
     }
 

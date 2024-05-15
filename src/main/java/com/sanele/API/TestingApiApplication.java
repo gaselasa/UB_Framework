@@ -9,18 +9,27 @@ import org.springframework.context.annotation.Bean;
 public class TestingApiApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(TestingApiApplication.class, args);
 	}
-		@Bean
+
+
+
+
+
+	@Bean
 		ApplicationRunner r(XrayJiraPayload page){
 
 			  return at ->{
 				  System.out.println("hhjfj");
-				  page.jsonPayload();
+			//	  page.jsonPayload();
 
 
 
 			  };
+
+
+
 		}
 
 

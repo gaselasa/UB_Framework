@@ -10,11 +10,22 @@ import org.springframework.stereotype.Component;
 @Component
 
 public class XrayPropertiesModel {
-   String username;
+
+    String username;
 
    @Value("${xray.password:kdkkd}")
   private String password;
-    String baseuri;
-    String token;
+  private  String baseuri;
+   private String token;
+   private String jsonfile;
+   private String client_id;
+   private String client_secret;
+   private String baseUriAuth;
+   private String BaseCucumberUri;
+
+
+
+
+
 
 }

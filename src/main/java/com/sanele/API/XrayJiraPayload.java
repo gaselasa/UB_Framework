@@ -4,50 +4,44 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
+import org.json.JSONArray;
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Type;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Map;
 
 @Component
-
+@Data
 public class XrayJiraPayload {
 
-    public void jsonPayload() throws IOException {
 
-        ObjectMapper mapper = new ObjectMapper();
-     TT t= new TT();
+    String cucumberJsonResult;
+
+    @Autowired
+    XrayPropertiesModel xrayPropertiesModel;
 
 
-        TT object =  mapper.readValue(new File("src/main/resources/test.json"),
-                TT.class);
-        System.out.println(object.toString());
 
+    public void readJsonFile() throws Exception {
+
+        this.cucumberJsonResult = readFileAsString(xrayPropertiesModel.getJsonfile());
     }
-}
-@Data
-class t{
 
-    String client_id;
-    String    client_secret;
-
-
-}
-
-@Data
-class TT {
-private String keyword;
-private String name;
-private float line;
-private String description;
-ArrayList<Object> tags = new ArrayList<Object>();
-private String id;
-private String uri;
-ArrayList<Object> elements = new ArrayList<Object>();
-
+    public static String readFileAsString(String file)throws Exception
+    {
+        return new String(Files.readAllBytes(Paths.get(file)));
+    }
 
 
 }
+
+
+
+
