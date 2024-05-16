@@ -16,12 +16,15 @@ public class XrayPropertiesModel {
    @Value("${xray.password:kdkkd}")
   private String password;
   private  String baseuri;
-   private String token;
+   private String xraytoken;
    private String jsonfile;
    private String client_id;
    private String client_secret;
-   private String baseUriAuth;
-   private String BaseCucumberUri;
+   @Value("${xray.baseXrayUriAuth:hahah}")
+   private String baseXrayUriAuth;
+   private String xrayBaseUri;
+   private String jiraToken;
+
 
 
 

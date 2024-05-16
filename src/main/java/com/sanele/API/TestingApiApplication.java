@@ -1,5 +1,7 @@
 package com.sanele.API;
 
+import com.sanele.API.TestingWeb.google;
+import com.sanele.API.TestingWeb.testy;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,11 +20,13 @@ public class TestingApiApplication {
 
 
 	@Bean
-		ApplicationRunner r(XrayJiraPayload page){
+		ApplicationRunner r(XrayJiraPage page){
 
 			  return at ->{
-				  System.out.println("hhjfj");
-			//	  page.jsonPayload();
+				  System.out.println("Runner");
+				  page.getXrayToken();
+
+
 
 
 

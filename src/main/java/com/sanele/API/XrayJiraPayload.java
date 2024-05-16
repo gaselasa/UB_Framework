@@ -22,16 +22,30 @@ import java.util.Map;
 public class XrayJiraPayload {
 
 
-    String cucumberJsonResult;
+
 
     @Autowired
     XrayPropertiesModel xrayPropertiesModel;
 
 
+    public JSONObject getXrayPayload(){
 
-    public void readJsonFile() throws Exception {
+        return new JSONObject("{\n" +
+                "    \"client_id\": \"9691D6A1A2E54B4DA6407DF003CA9450\",\n" +
+                "    \"client_secret\": \"53aba90ed8066e63edbbb6772768eb9def258b3ae12d19e23d111d237f0d0cc2\"\n" +
+                "}");
 
-        this.cucumberJsonResult = readFileAsString(xrayPropertiesModel.getJsonfile());
+
+
+
+
+    }
+
+
+    public String readJsonFile() throws Exception {
+
+          return readFileAsString(xrayPropertiesModel.getJsonfile());
+
     }
 
     public static String readFileAsString(String file)throws Exception
