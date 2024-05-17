@@ -1,13 +1,13 @@
 package com.restAssured.TestingApi.Steps;
 
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
-import io.cucumber.testng.CucumberOptions;
+import org.springframework.test.context.ContextConfiguration;
 
 
+@ContextConfiguration(classes = TestingApiApplicationTests.class)
 @SpringBootTest
-class RunCucumberTest {
+ class TestingApiApplicationTests {
 
 
 //	@Autowired

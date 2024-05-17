@@ -19,22 +19,22 @@ public class TestingApiApplication {
 
 
 
-	@Bean
-		ApplicationRunner r(XrayJiraPage page){
-
-			  return at ->{
-				  System.out.println("Runner");
-				  page.getXrayToken();
-
-
-
-
-
-			  };
-
-
-
-		}
+//	@Bean
+//		ApplicationRunner r(XrayJiraPage page){
+//
+//			  return at ->{
+//				  System.out.println("Runner");
+//				  page.getXrayToken();
+//
+//
+//
+//
+//
+//			  };
+//
+//
+//
+//		}
 
 
 
